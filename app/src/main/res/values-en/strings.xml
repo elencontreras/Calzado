@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Shoes</string>
+    <string name="adidas">Adidas</string>
+    <string name="app_calzado">SHOES APP</string>
+    <string name="borrar">Clear</string>
+    <string name="calcular">Calculate</string>
+    <string name="cantidad">Quantity</string>
+    <string name="clasico">Classic</string>
+    <string name="error1">Type quantity</string>
+    <string name="error2">Type quantity not 0</string>
+    <string name="femenino">Female</string>
+    <string name="genero">Gender</string>
+    <string name="marca">Make</string>
+    <string name="masculino">Male</string>
+    <string name="monto">Amount</string>
+    <string name="nike">Nike</string>
+    <string name="puma">Puma</string>
+    <string name="tipo">Shoe Type</string>
+    <string name="zapatilla">Sport Shoe</string>
+</resources>
