@@ -116,5 +116,6 @@ public class Principal extends AppCompatActivity {
         genero.setSelection(0);
         tipo.setSelection(0);
         marca.setSelection(0);
+        monto.setText("");
     }
 }
