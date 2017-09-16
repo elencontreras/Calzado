@@ -110,5 +110,11 @@ public class Principal extends AppCompatActivity {
         return true;
     }
 
-    
+    public void borrar(View v){
+
+        cantidad.setText("");
+        genero.setSelection(0);
+        tipo.setSelection(0);
+        marca.setSelection(0);
+    }
 }
