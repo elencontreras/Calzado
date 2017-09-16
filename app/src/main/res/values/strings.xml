@@ -14,6 +14,7 @@
     <string name="nike">Nike</string>
     <string name="adidas">Adidas</string>
     <string name="puma">Puma</string>
+    <string name="cantidad">Cantidad</string>
 
     <string-array name="opc_genero">
         <item>@string/femenino</item>
