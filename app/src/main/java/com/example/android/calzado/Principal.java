@@ -44,14 +44,71 @@ public class Principal extends AppCompatActivity {
     }
 
     public void calcular(View v){
-        int cant, opcGen, opcTip, opcMar, monto;
-        opcGen = genero.getSelectedItemPosition();
-        opcTip = tipo.getSelectedItemPosition();
-        opcMar = marca.getSelectedItemPosition();
-        cant = Integer.parseInt(cantidad.getText().toString());
+        int cant, opcGen, opcTip, opcMar, mont=0, res=0;
 
-        
+        if (validar()) {
+            opcGen = genero.getSelectedItemPosition();
+            opcTip = tipo.getSelectedItemPosition();
+            opcMar = marca.getSelectedItemPosition();
+            cant = Integer.parseInt(cantidad.getText().toString());
 
 
+            if (opcGen == 0 && opcTip == 0 && opcMar == 0) {
+                res = 100000;
+            }
+            if (opcGen == 0 && opcTip == 0 && opcMar == 1) {
+                res = 130000;
+            }
+            if (opcGen == 0 && opcTip == 0 && opcMar == 2) {
+                res = 110000;
+            }
+            if (opcGen == 0 && opcTip == 1 && opcMar == 0) {
+                res = 60000;
+            }
+            if (opcGen == 0 && opcTip == 1 && opcMar == 1) {
+                res = 70000;
+            }
+            if (opcGen == 0 && opcTip == 1 && opcMar == 2) {
+                res = 120000;
+            }
+            if (opcGen == 1 && opcTip == 0 && opcMar == 0) {
+                res = 120000;
+            }
+            if (opcGen == 1 && opcTip == 0 && opcMar == 1) {
+                res = 140000;
+            }
+            if (opcGen == 1 && opcTip == 0 && opcMar == 2) {
+                res = 130000;
+            }
+            if (opcGen == 1 && opcTip == 1 && opcMar == 0) {
+                res = 50000;
+            }
+            if (opcGen == 1 && opcTip == 1 && opcMar == 1) {
+                res = 80000;
+            }
+            if (opcGen == 1 && opcTip == 1 && opcMar == 2) {
+                res = 100000;
+            }
+
+            mont = res * cant;
+            monto.setText("$" + mont);
+        }
     }
+
+    private boolean validar(){
+
+        if (cantidad.getText().toString().isEmpty()){
+            cantidad.setError(res.getString(R.string.error1));
+            cantidad.requestFocus();
+            return false;
+        }
+        if (Integer.parseInt(cantidad.getText().toString())==0){
+            cantidad.setError(res.getString(R.string.error2));
+            cantidad.requestFocus();
+            return false;
+        }
+        return true;
+    }
+
+    
 }
