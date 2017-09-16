@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Calzado</string>
+    <string name="app_calzado">APP CALZADO</string>
+    <string name="genero">Genero</string>
+    <string name="tipo">Tipo</string>
+    <string name="marca">Marca</string>
+    <string name="calcular">Calcular</string>
+    <string name="borrar">Borrar</string>
+    <string name="monto">Monto a pagar</string>
+    <string name="femenino">Femenino</string>
+    <string name="masculino">Masculino</string>
+    <string name="zapatilla">Zapatilla</string>
+    <string name="clasico">Clasico</string>
+    <string name="nike">Nike</string>
+    <string name="adidas">Adidas</string>
+    <string name="puma">Puma</string>
+
+    <string-array name="opc_genero">
+        <item>@string/femenino</item>
+        <item>@string/masculino</item>
+    </string-array>
+
+    <string-array name="opc_tipo">
+        <item>@string/zapatilla</item>
+        <item>@string/clasico</item>
+    </string-array>
+
+    <string-array name="opc_marca">
+        <item>@string/nike</item>
+        <item>@string/adidas</item>
+        <item>@string/puma</item>
+    </string-array>
+
+</resources>
