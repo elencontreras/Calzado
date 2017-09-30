@@ -43,8 +43,8 @@ public class Principal extends AppCompatActivity {
         marca.setAdapter(adapterMarca);
     }
 
-    public void calcular(View v){
-        int cant, opcGen, opcTip, opcMar, mont=0, res=0;
+    public void calcular(View v) {
+        int cant, opcGen, opcTip, opcMar, mont = 0, res = 0;
 
         if (validar()) {
             opcGen = genero.getSelectedItemPosition();
@@ -53,45 +53,8 @@ public class Principal extends AppCompatActivity {
             cant = Integer.parseInt(cantidad.getText().toString());
 
 
-            if (opcGen == 0 && opcTip == 0 && opcMar == 0) {
-                res = 100000;
-            }
-            if (opcGen == 0 && opcTip == 0 && opcMar == 1) {
-                res = 130000;
-            }
-            if (opcGen == 0 && opcTip == 0 && opcMar == 2) {
-                res = 110000;
-            }
-            if (opcGen == 0 && opcTip == 1 && opcMar == 0) {
-                res = 60000;
-            }
-            if (opcGen == 0 && opcTip == 1 && opcMar == 1) {
-                res = 70000;
-            }
-            if (opcGen == 0 && opcTip == 1 && opcMar == 2) {
-                res = 120000;
-            }
-            if (opcGen == 1 && opcTip == 0 && opcMar == 0) {
-                res = 120000;
-            }
-            if (opcGen == 1 && opcTip == 0 && opcMar == 1) {
-                res = 140000;
-            }
-            if (opcGen == 1 && opcTip == 0 && opcMar == 2) {
-                res = 130000;
-            }
-            if (opcGen == 1 && opcTip == 1 && opcMar == 0) {
-                res = 50000;
-            }
-            if (opcGen == 1 && opcTip == 1 && opcMar == 1) {
-                res = 80000;
-            }
-            if (opcGen == 1 && opcTip == 1 && opcMar == 2) {
-                res = 100000;
-            }
+            monto.setText(""+Metodos.calcular(opcGen,opcTip,opcMar,cant));
 
-            mont = res * cant;
-            monto.setText("$" + mont);
         }
     }
 
@@ -102,7 +65,7 @@ public class Principal extends AppCompatActivity {
             cantidad.requestFocus();
             return false;
         }
-        if (Integer.parseInt(cantidad.getText().toString())==0){
+        if (Metodos.validarCantidad(Integer.parseInt(cantidad.getText().toString()))){
             cantidad.setError(res.getString(R.string.error2));
             cantidad.requestFocus();
             return false;
@@ -118,4 +81,5 @@ public class Principal extends AppCompatActivity {
         marca.setSelection(0);
         monto.setText("");
     }
+
 }
